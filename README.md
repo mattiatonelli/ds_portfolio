@@ -13,7 +13,6 @@ I hope you will enjoy it as much as I did while crafting these works.
 ## Table of Contents
 * [📱 Contacts](#-contacts)
 * [📝 Projects](#-projects)
-* [🔧 Requirements](#-requirements)
 
 ### 📱 Contacts
 
@@ -27,9 +26,7 @@ Channel | Contact
 
 | Name                            | Topics                                                                                | Last Confirmed Working Date
 |------------------------------------|---------------------------------------------------------------------------------------| :----------: |
-| [Chicago's Most Visited Attractions](https://github.com/dataquestio/solutions/blob/master/Mission9Solutions.ipynb) | - Web Scraping; <br> - Data Collection and Preprocessing; <br> - Clustering; <br> - Geospatial Data. | <center> 16 July 2020 </center> |
+| [Chicago's Most Visited Attractions](https://github.com/mattiatonelli/ds_portfolio/blob/master/Clustering/Chicago%20Taxi%20-%20Scraping%20and%20Clustering.ipynb) | - Web Scraping; <br> - Data Collection and Preprocessing; <br> - Clustering; <br> - Geospatial Data. | <center> 27 July 2020 </center> |
 |                                    |         |     
 
 </center>
-
-### 🔧 Requirements
