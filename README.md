@@ -24,9 +24,9 @@ Channel | Contact
 
 <center>
 
-| Name                            | Topics                                                                                | Last Confirmed Working Date
-|------------------------------------|---------------------------------------------------------------------------------------| :----------: |
-| [Chicago's Most Visited Attractions](https://github.com/mattiatonelli/ds_portfolio/blob/master/Clustering/Chicago%20Taxi%20-%20Scraping%20and%20Clustering.ipynb) | - Web Scraping; <br> - Data Collection and Preprocessing; <br> - Clustering; <br> - Geospatial Data. | <center> 27 July 2020 </center> |
+| Name                               |Folder| Topics                                                                                | Last Confirmed Working Date
+|------------------------------------|- | --------------------------------------------------------------------------------------| :----------: |
+| [Chicago's Most Visited Attractions](https://github.com/mattiatonelli/ds_portfolio/blob/master/Clustering/Chicago%20Taxi%20-%20Scraping%20and%20Clustering.ipynb) | <center> Clustering </center>|  - Web Scraping; <br> - Data Collection and Preprocessing; <br> - Clustering; <br> - Geospatial Data. | <center> 27 July 2020 </center> |
 |                                    |         |     
 
 </center>
