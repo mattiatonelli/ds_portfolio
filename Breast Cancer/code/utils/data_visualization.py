@@ -15,6 +15,12 @@ def subplot_generator(df: pd.DataFrame, plot: str, y=None) -> None:
     fig.tight_layout(pad=3.0)
     axes = axes.flatten()
 
+    plot_feature(df, plot, axes)
+    
+def plot_feature(df: pd.DataFrame, plot: str, axes, y=None) -> None:
+    """
+    Create the selected plot for each future in the DataFrame.
+    """
     for i, feature in enumerate(df.columns):
         if plot == 'histogram':
             histoplot(df, feature, i, axes)
@@ -22,6 +28,8 @@ def subplot_generator(df: pd.DataFrame, plot: str, y=None) -> None:
             violinplot(df, y, feature, i, axes)
         elif plot == 'swarmplot':
             swarmplot(df, y, feature, i, axes)
+        elif plot == 'boxplot':
+            boxplot(df, y, feature, i, axes)
 
 
 def histoplot(df: pd.DataFrame, feature: str, i: int, axes) -> None:
@@ -72,6 +80,23 @@ def swarmplot(df: pd.DataFrame, y: pd.Series, feature: str, i: int, axes) -> Non
     
     plot_polishing(axes=axes, i=i, plot='swarmplot')
 
+def boxplot(df: pd.DataFrame, y: pd.Series, feature: str, i: int, axes) -> None:
+    """
+    Prepare the several swarmplots to enter the main plot.
+    """
+
+    sns.boxplot(ax=axes[i],
+                data=df,
+                x=feature,
+                orient='v',
+                width=0.3,
+                flierprops={'marker' : 'x',
+                            'markeredgecolor' : 'red', 
+                            'markersize' : 6})
+    
+    plot_polishing(axes=axes, i=i, plot='histogram')
+
+
 def plot_polishing(axes, i: int, plot: str) -> None:
     """
     Eliminate the clutter from the plots. 
@@ -80,8 +105,8 @@ def plot_polishing(axes, i: int, plot: str) -> None:
     axes[i].spines['right'].set_visible(False)
     axes[i].spines['left'].set_visible(False)
     axes[i].get_yaxis().set_visible(False)
-    
-    if plot == 'histogram':
+
+    if plot in {'boxplot', 'histogram'}:
         axes[i].set(ylabel='')
         axes[i].set_xticks([])
     else:
