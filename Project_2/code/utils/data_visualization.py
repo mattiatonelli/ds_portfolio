@@ -15,7 +15,7 @@ def subplot_generator(df: pd.DataFrame, plot: str, y=None) -> None:
     fig.tight_layout(pad=3.0)
     axes = axes.flatten()
 
-    plot_feature(df, plot, axes)
+    plot_feature(df, plot, axes, y)
     
 def plot_feature(df: pd.DataFrame, plot: str, axes, y=None) -> None:
     """
